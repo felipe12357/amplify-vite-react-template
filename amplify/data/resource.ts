@@ -1,5 +1,11 @@
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
 
+//Para actualizar estos modelos: 
+//en la power shell como administrador: Set-ExecutionPolicy RemoteSigned
+//Ejecutar el comando: amplify codegen models
+//Restaurar la politica en el powershell: Set-ExecutionPolicy Restricted
+
+
 /*== STEP 1 ===============================================================
 The section below creates a Todo database table with a "content" field. Try
 adding a new "isDone" field as a boolean. The authorization rule below
@@ -10,6 +16,12 @@ const schema = a.schema({
   Todo: a
     .model({
       content: a.string(),
+    })
+    .authorization((allow) => [allow.publicApiKey()]),
+   People: a
+    .model({
+      name:a.string(),
+      skills:a.string().array()
     })
     .authorization((allow) => [allow.publicApiKey()]),
 });

@@ -1,3 +1,9 @@
+## npx ampx sandbox --profile  
+    comando que habilita detectar los cambios y nuevos modelos
+    para lograrlo hay q crear un usuario de IAM identity center
+    
+    https://docs.amplify.aws/react/start/account-setup/
+
 ## AWS Amplify React+Vite Starter Template
 
 This repository provides a starter template for creating applications using React+Vite and AWS Amplify, emphasizing easy setup for authentication, API, and database capabilities.

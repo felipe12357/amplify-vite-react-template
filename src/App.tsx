@@ -7,7 +7,7 @@ const client = generateClient<Schema>();
 
 function App() {
 
-  const { signOut } = useAuthenticator();
+  /* const { signOut } = useAuthenticator(); */
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
   const input_ref = useRef<HTMLInputElement>(null);
   useEffect(() => {
@@ -38,7 +38,7 @@ function App() {
             </li> 
         ))}
       </ul>
-      <button onClick={signOut}>Sign out</button>
+   {/*    <button onClick={signOut}>Sign out</button> */}
     </main>
   );
 }
